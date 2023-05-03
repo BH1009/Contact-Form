@@ -26,7 +26,11 @@ if(opinion.value === ""){
 enviar.addEventListener('click', (e) => {
   e.preventDefault();
   if(errores.length > 0 ){
-    alert(`${errores[0]} ${errores[1]} ${errores[2]} ${errores[3]}`);
+    alert(`
+    ${errores[0]} 
+    ${errores[1]} 
+    ${errores[2]} 
+    ${errores[3]}`);
   }
   else{
     alert(`${nombre.value} \n ${correo.value} \n ${asunto.value} \n ${opinion.value}`);
