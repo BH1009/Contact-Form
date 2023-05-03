@@ -36,3 +36,4 @@ enviar.addEventListener('click', (e) => {
     alert(`${nombre.value} \n ${correo.value} \n ${asunto.value} \n ${opinion.value}`);
   }
 });
+
