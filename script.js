@@ -37,3 +37,7 @@ enviar.addEventListener('click', (e) => {
   }
 });
 
+
+function enviar(){
+
+}
