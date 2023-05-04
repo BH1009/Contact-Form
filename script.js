@@ -36,7 +36,7 @@ formulario.addEventListener("submit", (e) => {
       asunto: asunto,
       opinion: opinion
     }
-    enviarDatos(datos);
+    enviarDatos(datos)
   }
 })
 
@@ -44,10 +44,11 @@ formulario.addEventListener("submit", (e) => {
 function enviarDatos(datos){
   const xmlh = new XMLHttpRequest();
   xmlh.open("POST", "correo.php");
+  solicitud.setRequestHeader('Content-Type', 'application/json');
   xmlh.send(JSON.stringify(datos));
   xmlh.onreadystatechange = () => {
     if(this.readyState == 4 && this.status == 400){
-      alert("Los datos se han enviado");
+      console.log('Los datos ya se enviaron');
     }
   }
 }

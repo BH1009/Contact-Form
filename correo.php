@@ -1,10 +1,13 @@
 <?php 
 
 $destinatario = "brayan.hernandes.proglunes@gmail.com";
-// $nombre = $_POST['nombre'];
-// $correo = $_POST['correo'];
-// $asunto = $_POST['asuntoo'];
-// $opinion = $_POST['opinion'];
+$nombre = $_POST['nombre'];
+$correo = $_POST['correo'];
+$asunto = $_POST['asunto'];
+$opinion = $_POST['opinion'];
 
-// echo $nombre . " " . $correo . " " . $asunto . " " . $opinion;
-echo $destinatario;
+if(empty($nombre)){
+    echo `alert("El formulario no se puede enviar")`;
+}
+
+echo $nombre . " " . $correo . " " . $asunto . " " . $opinion;
