@@ -1,6 +1,6 @@
 const formulario = document.getElementById("contacto");
 let errores = ``;
-
+let datos = '';
 formulario.addEventListener("submit", (e) => {
 
   //Se recuperan todos los campos del formulario
@@ -30,11 +30,24 @@ formulario.addEventListener("submit", (e) => {
     errores = "";
   }
   else {
-    alert(`
-        ${nombre}
-        ${correo}
-        ${asunto}
-        ${opinion}
-      `);
+    datos = {
+      nombre: nombre,
+      correo: correo,
+      asunto: asunto,
+      opinion: opinion
+    }
+    enviarDatos(datos);
   }
 })
+
+
+function enviarDatos(datos){
+  const xmlh = new XMLHttpRequest();
+  xmlh.open("POST", "correo.php");
+  xmlh.send(JSON.stringify(datos));
+  xmlh.onreadystatechange = () => {
+    if(this.readyState == 4 && this.status == 400){
+      alert("Los datos se han enviado");
+    }
+  }
+}
