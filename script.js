@@ -30,7 +30,7 @@ formulario.addEventListener("submit", (e) => {
   }else{
     // //Se llama una petición ajax
     enviarDatos(datos);
-    // formulario.reset();
+    formulario.reset();
   }
 })
 
