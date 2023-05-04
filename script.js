@@ -34,7 +34,6 @@ formulario.addEventListener("submit", (e) => {
   }
 })
 
-
 function enviarDatos(datos){
   fetch('correo.php', {
     method: 'POST',
@@ -50,6 +49,7 @@ function enviarDatos(datos){
 function mostrarAlerta(data){
   alert(data);
 }
+
 function enviarDatosX(datos){
   let xmlh = new XMLHttpRequest();
   xmlh.open('POST', 'correo.php', true);
