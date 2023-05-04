@@ -6,8 +6,6 @@ $correo = $_POST['correo'];
 $asunto = $_POST['asunto'];
 $opinion = $_POST['opinion'];
 
-if(empty($nombre)){
-    echo `alert("El formulario no se puede enviar")`;
-}
 
-echo $nombre . " " . $correo . " " . $asunto . " " . $opinion;
+
+ echo json_encode($nombre . " " . $correo . " " . $asunto . " " . $opinion);
