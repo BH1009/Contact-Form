@@ -30,7 +30,7 @@ formulario.addEventListener("submit", (e) => {
   }else{
     // //Se llama una petición ajax
     enviarDatos(datos);
-    formulario.reset();
+    // formulario.reset();
   }
 })
 
@@ -43,9 +43,13 @@ function enviarDatos(datos){
   .then(res => res.json())
   .then(data => {
     console.log(data);
+    mostrarAlerta(data);
   })
 }
 
+function mostrarAlerta(data){
+  alert(data);
+}
 function enviarDatosX(datos){
   let xmlh = new XMLHttpRequest();
   xmlh.open('POST', 'correo.php', true);

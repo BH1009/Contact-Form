@@ -10,6 +10,5 @@ $opinion = $_POST['opinion'];
 $header = "Enviado desde HealthyPets";
 $mensaje = $opinion . "\nEscrito por: " . $nombre;  
 
-$mail($destinatario, $asunto, $mensaje, $header);
-
-echo json_encode("Su mensaje se ha enviado");
+echo json_encode("Se envio");
+// mail($destinatario, $asunto, $mensaje, $header);
