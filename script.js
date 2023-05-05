@@ -34,29 +34,18 @@ formulario.addEventListener("submit", (e) => {
   }
 })
 
-function enviarDatos(datos){
-  fetch('correo.php', {
-    method: 'POST',
-    body: datos
-  })
-  .then(res => res.json())
-  .then(data => {
-    console.log(data);
-    mostrarAlerta(data);
-  })
+function enviarDatos(){
+  enviarCorreo()
+  // fetch('correo.php', {
+  //   method: 'POST',
+  //   body: datos
+  // })
+  // .then(res => res.json())
+  // .then(data => {
+  //   mostrarAlerta(data);
+  // })
 }
 
 function mostrarAlerta(data){
   alert(data);
-}
-
-function enviarDatosX(datos){
-  let xmlh = new XMLHttpRequest();
-  xmlh.open('POST', 'correo.php', true);
-  xmlh.send(datos);
-  xmlh.onreadystatechange = () => {
-    if(this.readyState == 4 && this.status == 200){
-      console.log(JSON.parse(this.responseText));
-    }
-  }
 }
