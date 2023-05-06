@@ -28,8 +28,25 @@ formulario.addEventListener("submit", (e) => {
     alert(errores);
     errores = "";
   }else{
-    formulario.action = 'https://formsubmit.co/brayanhernandez.proglunes@gmail.com';
+    enviarFormulario(nombre, correo, asunto, opinion)
   }
 })
 
-
+function enviarFormulario(nombre, correo, asunto, opinion){
+  fetch("https://formsubmit.co/fenubejo@mailgolem.com", {
+    method: "POST",
+    headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        "nombre": nombre,
+        "correo": correo,
+        "asunto": asunto,
+        "opinion": opinion
+    })
+})
+    .then(response => response.json())
+    .then(data => alert(data))
+    .catch(error => alert(error));
+}
