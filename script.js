@@ -1,6 +1,6 @@
 const formulario = document.getElementById("contacto");
 let errores = ``;
-let datos = '';
+
 formulario.addEventListener("submit", (e) => {
   //Se frena la reaccion del formulario
   e.preventDefault();
@@ -28,31 +28,25 @@ formulario.addEventListener("submit", (e) => {
     alert(errores);
     errores = "";
   }else{
-    // //Se llama una petición ajax
-    enviarDatos(datos);
-    formulario.reset();
+    enviarFormulario(nombre, correo, asunto, opinion)
   }
 })
 
-
-function enviarDatos(datos){
-  fetch('correo.php', {
-    method: 'POST',
-    body: datos
-  })
-  .then(res => res.json())
-  .then(data => {
-    console.log(data);
-  })
-}
-
-function enviarDatosX(datos){
-  let xmlh = new XMLHttpRequest();
-  xmlh.open('POST', 'correo.php', true);
-  xmlh.send(datos);
-  xmlh.onreadystatechange = () => {
-    if(this.readyState == 4 && this.status == 200){
-      console.log(JSON.parse(this.responseText));
-    }
-  }
+function enviarFormulario(nombre, correo, asunto, opinion){
+  fetch("https://formsubmit.co/fenubejo@mailgolem.com", {
+    method: "POST",
+    headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        "nombre": nombre,
+        "correo": correo,
+        "asunto": asunto,
+        "opinion": opinion
+    })
+})
+    .then(response => response.json())
+    .then(data => alert(data))
+    .catch(error => alert(error));
 }
