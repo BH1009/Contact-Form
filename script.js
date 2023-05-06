@@ -1,6 +1,6 @@
 const formulario = document.getElementById("contacto");
 let errores = ``;
-let datos = '';
+
 formulario.addEventListener("submit", (e) => {
   //Se frena la reaccion del formulario
   e.preventDefault();
@@ -28,24 +28,8 @@ formulario.addEventListener("submit", (e) => {
     alert(errores);
     errores = "";
   }else{
-    // //Se llama una petición ajax
-    enviarDatos(datos);
-    formulario.reset();
+    formulario.action = 'https://formsubmit.co/brayanhernandez.proglunes@gmail.com';
   }
 })
 
-function enviarDatos(){
-  enviarCorreo()
-  // fetch('correo.php', {
-  //   method: 'POST',
-  //   body: datos
-  // })
-  // .then(res => res.json())
-  // .then(data => {
-  //   mostrarAlerta(data);
-  // })
-}
 
-function mostrarAlerta(data){
-  alert(data);
-}
