@@ -39,7 +39,7 @@ formulario.addEventListener("submit", (e) => {
 })
 
 function enviarFormulario(nombre, correo, asunto, opinion){
-  fetch("https://formsubmit.co/fenubejo@mailgolem.com", {
+  fetch("https://formsubmit.co/sitogave@mailgolem.com", {
     method: "POST",
     headers: { 
         'Content-Type': 'application/json',
