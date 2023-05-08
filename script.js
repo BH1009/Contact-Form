@@ -29,6 +29,12 @@ formulario.addEventListener("submit", (e) => {
     errores = "";
   }else{
     enviarFormulario(nombre, correo, asunto, opinion)
+    // console.log(JSON.stringify({
+    //     "nombre": nombre,
+    //     "correo": correo,
+    //     "asunto": asunto,
+    //     "opinion": opinion
+    // }))
   }
 })
 
