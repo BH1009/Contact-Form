@@ -1,6 +1,6 @@
 # Formulario de contacto 
 
-Este formulario esta echo con algo de html y css basico, ademas de que se hace de uso de Formsubmit que nos permite enviar correos sin la necesidad de crear un backend, se puede utilizar de diferentes formas, siendo las mas simplem agregando una url especial dentro de la etiqueta action, toda la documentacion y uso estan es su pagina que es la siguiente [Formsubmit](https://formsubmit.co/).
+Este formulario esta echo con algo de html y css basico, ademas de que se hace de uso de Formsubmit que nos permite enviar correos sin la necesidad de crear un backend, se puede utilizar de diferentes formas, siendo la mas simple agregando una url especial dentro de la etiqueta action, toda la documentacion y uso estan es su pagina que es la siguiente [Formsubmit](https://formsubmit.co/).
 
 <img src="./img/formsubmit.png" width="600px" align="center">
 <br><br>
@@ -12,7 +12,7 @@ Para no compremeter nuestro correo personal y para pruebas utilizaremos mailgole
 
 ## Utilizaremos un correo para tomarlo de ejemplo y probarlo
 
-1. Primero tmaremos el correo que nos proporciona mailgolem.
+1. Primero tomaremos el correo que nos proporciona mailgolem.
 
 2. Despues lo colocaremos en la propiedad action de la etiqueta form.
 
